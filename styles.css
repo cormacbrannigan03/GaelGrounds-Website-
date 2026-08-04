@@ -3,22 +3,38 @@
   --green-light: #14603F;
   --gold: #D9A441;
   --cream: #FAF7F0;
+  --cream-deep: #F2ECDC;
+  --mint-tint: #EFF4EE;
+  --gold-tint: #FBF2E1;
   --ink: #16241D;
   --muted: #5B6B62;
   --border: #E4DFD0;
   --max: 1100px;
+  --frame: 14px;
 }
 
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
+/* A thin green border frames the whole page, fading into the page's own
+   background over a short distance -- same idea as the iOS app's
+   gaelGroundsBackground() gradient (brand green at the edges, fading to
+   the system background toward the middle), reworked as a real border
+   around the page rather than an overlay on top of it, so it never
+   washes out the nav or hero text underneath. */
 body {
   margin: 0;
+  padding: var(--frame);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--ink);
-  background: var(--cream);
   line-height: 1.55;
+  background:
+    linear-gradient(to bottom, var(--green) 0%, transparent 100%) top / 100% var(--frame) no-repeat,
+    linear-gradient(to top, var(--green) 0%, transparent 100%) bottom / 100% var(--frame) no-repeat,
+    linear-gradient(to right, var(--green) 0%, transparent 100%) left / var(--frame) 100% no-repeat,
+    linear-gradient(to left, var(--green) 0%, transparent 100%) right / var(--frame) 100% no-repeat,
+    var(--cream);
 }
 
 img, svg { display: block; max-width: 100%; }
@@ -34,7 +50,7 @@ a { color: inherit; }
 /* Nav */
 header.site {
   position: sticky;
-  top: 0;
+  top: var(--frame);
   z-index: 20;
   background: rgba(250, 247, 240, 0.92);
   backdrop-filter: blur(8px);
@@ -273,6 +289,13 @@ h1 .accent { color: var(--gold); }
 
 /* Sections */
 section { padding: 80px 0; }
+
+/* Gentle shade rhythm down the page -- variants on the same cream/green/
+   gold family, never a different hue, so it reads as "one page" rather
+   than a patchwork. */
+section.tint-mint { background: var(--mint-tint); }
+section.tint-gold { background: var(--gold-tint); }
+section.tint-deep { background: var(--cream-deep); }
 
 .section-head { max-width: 640px; margin: 0 auto 48px; text-align: center; }
 .section-head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); color: var(--green); margin: 0 0 14px; letter-spacing: -0.01em; }
