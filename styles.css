@@ -436,6 +436,9 @@ section.tint-deep { background: var(--cream-deep); }
 
 .waitlist-error { color: #b3261e; font-size: 0.85rem; margin: 0; }
 
+.waitlist-privacy-note { color: var(--muted); font-size: 0.8rem; margin: -2px 0 2px; }
+.waitlist-privacy-note a { color: var(--green-light); font-weight: 600; }
+
 .waitlist-modal .social-links { justify-content: flex-start; gap: 12px; margin-top: 4px; }
 .waitlist-modal .social-link {
   color: var(--green);
@@ -592,6 +595,7 @@ footer.site {
 .policy h1 { margin-bottom: 6px; }
 .policy .updated { color: var(--muted); font-size: 0.88rem; margin-bottom: 40px; }
 .policy h2 { color: var(--green); font-size: 1.25rem; margin: 36px 0 12px; }
+.policy h3 { color: var(--green); font-size: 1.05rem; margin: 24px 0 8px; }
 .policy p, .policy li { color: var(--ink); font-size: 0.97rem; }
 .policy ul { padding-left: 20px; }
 .policy a.back { display: inline-block; margin-bottom: 24px; font-weight: 700; color: var(--green-light); text-decoration: none; font-size: 0.9rem; }

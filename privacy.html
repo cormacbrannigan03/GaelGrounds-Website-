@@ -55,16 +55,26 @@
     </div>
     <p>We do not collect more than the app needs to function. We don't sell personal data to anyone, ever.</p>
 
+    <h3 id="waitlist">Joining the waiting list</h3>
+    <p class="intro-note">This is separate from creating an app account — you can join the waiting list without ever having a GaelGrounds account.</p>
+    <div class="policy-table-wrap">
+      <table>
+        <tr><th>Data</th><th>Where it comes from</th><th>Why we collect it</th></tr>
+        <tr><td>Email address</td><td>Waiting list signup form on the website</td><td>To send you a one-time welcome email and, later, a one-time notification when GaelGrounds launches on the App Store</td></tr>
+      </table>
+    </div>
+
     <h2>3. Legal basis for processing (GDPR Article 6)</h2>
     <ul>
       <li><strong>Contract</strong>: account creation, check-ins, match logs, core app functionality — necessary to provide the service you signed up for.</li>
       <li><strong>Legitimate interest</strong>: leaderboard, friend features, achievements — reasonably expected as part of a social/gamified app, and you can opt out by not using those features.</li>
-      <li><strong>Consent</strong>: any optional marketing communications (if introduced later) — will use a separate, specific opt-in.</li>
+      <li><strong>Consent</strong>: joining the waiting list — submitting your email is your consent to receive (a) a one-time welcome email confirming your signup and (b) a one-time notification when the app launches on the App Store. This is the "separate, specific opt-in" for marketing-style communications referred to above. You can withdraw this consent at any time by emailing us to be removed from the list. Any future communications beyond (a) and (b) would need a further, distinct opt-in.</li>
     </ul>
 
     <h2>4. Who we share data with</h2>
     <ul>
-      <li><strong>Supabase</strong> (our backend/database provider) — processes all app data on our behalf under a Data Processing Agreement. Supabase's servers/subprocessors are covered by their own DPA and Standard Contractual Clauses for any data transferred outside the EEA.</li>
+      <li><strong>Supabase</strong> (our backend/database provider) — processes all app data on our behalf, including waiting-list email addresses, under a Data Processing Agreement. Supabase's servers/subprocessors are covered by their own DPA and Standard Contractual Clauses for any data transferred outside the EEA. The waiting-list table itself is write-only from the public API — even we can only read it via the Supabase dashboard or service-role access, never through any public endpoint.</li>
+      <li><strong>Resend</strong> (transactional email provider) — sends the one-time waiting-list welcome email on our behalf, from hello@gaelgrounds.ie. Resend processes this data under a Data Processing Agreement; because Resend is a US-headquartered company, transfers are additionally covered by Standard Contractual Clauses under Resend's DPA.</li>
       <li><strong>Apple</strong> — handles App Store account, download, and payment data as an independent controller under Apple's own privacy policy, not ours.</li>
       <li>We do not share your data with advertisers or data brokers. We do not currently use third-party analytics or tracking SDKs; if that changes, this policy and the App Store privacy label will be updated first.</li>
     </ul>
@@ -74,6 +84,7 @@
       <li>Account and app data: kept for as long as your account is active.</li>
       <li>If you delete your account, or ask us to delete it: your data is deleted within 30 days.</li>
       <li>Deleted data may persist in routine backups for up to 30 days after deletion, for disaster-recovery purposes only, before being permanently purged.</li>
+      <li>Waiting-list email addresses: kept until we send the one-time launch notification, or for a maximum of 12 months from signup, whichever comes first — then deleted. You can also ask to be removed at any time before then.</li>
     </ul>
 
     <h2>6. Your rights</h2>
@@ -86,6 +97,7 @@
       <li>Object to or restrict certain processing</li>
     </ul>
     <p>To exercise any of these, email <a href="mailto:cormac.brannigan03@gmail.com">cormac.brannigan03@gmail.com</a>. We'll respond within one month, as required by GDPR.</p>
+    <p>If you joined the waiting list and just want to be removed from it, the same email address works — no need to reference an account, since joining the waiting list doesn't create one.</p>
     <p>You also have the right to complain to the Irish Data Protection Commission (<a href="https://dataprotection.ie" target="_blank" rel="noopener">dataprotection.ie</a>) if you think we've mishandled your data.</p>
 
     <h2>7. Premium subscription (once launched)</h2>
