@@ -111,14 +111,24 @@ nav .links a:hover { opacity: 1; }
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.92rem;
+  font-family: inherit;
   text-decoration: none;
   border: 1px solid transparent;
   cursor: default;
 }
 
+button.btn { cursor: pointer; appearance: none; }
+button.btn:disabled { opacity: 0.7; cursor: default; }
+
 .btn-primary {
   background: var(--green);
   color: #fff;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .btn-ghost {
@@ -351,6 +361,88 @@ section.tint-deep { background: var(--cream-deep); }
 .step h3 { margin: 0 0 8px; color: var(--green); font-size: 1.1rem; }
 .step p { margin: 0; color: var(--muted); font-size: 0.92rem; }
 
+/* Waitlist modal */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.waitlist-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.waitlist-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(11, 61, 46, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.waitlist-overlay[hidden] { display: none; }
+
+.waitlist-modal {
+  position: relative;
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 36px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 30px 70px -20px rgba(11, 61, 46, 0.5);
+}
+
+.waitlist-modal h2 { color: var(--green); margin: 0 0 8px; font-size: 1.4rem; }
+.waitlist-modal p { color: var(--muted); margin: 0 0 20px; font-size: 0.95rem; }
+
+.waitlist-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(11, 61, 46, 0.08);
+  color: var(--green);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.waitlist-close:hover { background: rgba(11, 61, 46, 0.16); }
+
+#waitlist-form { display: flex; flex-direction: column; gap: 12px; }
+
+#waitlist-email {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+#waitlist-email:focus { outline: 2px solid var(--green-light); outline-offset: 1px; }
+
+.waitlist-error { color: #b3261e; font-size: 0.85rem; margin: 0; }
+
+.waitlist-modal .social-links { justify-content: flex-start; gap: 12px; margin-top: 4px; }
+.waitlist-modal .social-link {
+  color: var(--green);
+  border-color: var(--border);
+}
+.waitlist-modal .social-link:hover { background: rgba(11, 61, 46, 0.06); }
+
 /* Social banner */
 .social-banner {
   background: linear-gradient(155deg, var(--green) 0%, var(--green-light) 100%);
@@ -554,4 +646,6 @@ footer.site {
 @media (max-width: 560px) {
   .grid-features { grid-template-columns: 1fr; }
   .strip { grid-template-columns: 1fr; }
+  .nav-actions .btn-ghost { display: none; }
+  #waitlist-open { padding: 10px 14px; font-size: 0.85rem; }
 }
