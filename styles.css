@@ -351,6 +351,39 @@ section.tint-deep { background: var(--cream-deep); }
 .step h3 { margin: 0 0 8px; color: var(--green); font-size: 1.1rem; }
 .step p { margin: 0; color: var(--muted); font-size: 0.92rem; }
 
+/* Social banner */
+.social-banner {
+  background: linear-gradient(155deg, var(--green) 0%, var(--green-light) 100%);
+}
+
+.social-banner .section-head h2 { color: #fff; }
+.social-banner .section-head p { color: rgba(255, 255, 255, 0.78); }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  transition: background 0.15s ease;
+}
+
+.social-link:hover { background: rgba(255, 255, 255, 0.12); }
+
+.social-link svg { width: 18px; height: 18px; }
+
 /* Premium */
 .premium {
   background: linear-gradient(155deg, var(--green) 0%, var(--green-light) 100%);
