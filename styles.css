@@ -445,6 +445,7 @@ section.tint-deep { background: var(--cream-deep); }
 .strip .stat { padding: 24px 12px; }
 .strip .stat .n { font-size: 1.9rem; font-weight: 800; color: var(--green); }
 .strip .stat .l { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+.strip .stat .sub { font-size: 0.72rem; color: var(--muted); opacity: 0.8; margin-top: 8px; line-height: 1.4; }
 
 /* Final CTA */
 .final-cta {
