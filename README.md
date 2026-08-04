@@ -14,6 +14,18 @@ no framework.
 - `styles.css` — shared styles (uses the app's own brand colours), all four
   pages draw from this one stylesheet rather than duplicating styles per page
 - `CNAME` — tells GitHub Pages to serve this site at `www.gaelgrounds.ie`
+- `AppIcon-1024.png` — the real app icon (1024×1024 source, same asset
+  intended for the iOS app's `Assets.xcassets` once the Xcode project
+  exists). `favicon-32.png`, `apple-touch-icon.png`, and `icon-64.png` are
+  generated from it (browser tab icon, iOS "Add to Home Screen" icon, and
+  the nav/footer brand mark, respectively) — regenerate them from the
+  source with Pillow if the icon ever changes:
+  ```python
+  from PIL import Image
+  src = Image.open("AppIcon-1024.png").convert("RGBA")
+  for name, size in {"favicon-32.png": 32, "apple-touch-icon.png": 180, "icon-64.png": 64}.items():
+      src.resize((size, size), Image.LANCZOS).save(name, optimize=True)
+  ```
 
 This is marketing content only — it describes the app's features, it doesn't
 reimplement any of them (no real check-ins, accounts, or data here).
