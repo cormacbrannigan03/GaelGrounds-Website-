@@ -1,12 +1,18 @@
 # GaelGrounds website
 
-Marketing site for the GaelGrounds app — a homepage plus Privacy Policy and
-Terms of Service pages. Plain static HTML/CSS, no build step, no framework.
+Marketing site for the GaelGrounds app — a homepage plus Privacy Policy,
+Terms of Service, and Support pages. Plain static HTML/CSS, no build step,
+no framework.
 
 - `index.html` — homepage
-- `privacy.html` — Privacy Policy
-- `terms.html` — Terms of Service
-- `styles.css` — shared styles (uses the app's own brand colours)
+- `privacy.html` — Privacy Policy (GDPR-oriented: legal basis for
+  processing, data retention, DPC complaint rights)
+- `terms.html` — Terms of Service (GAA non-affiliation, Premium billing
+  terms including the EU 14-day withdrawal right, liability)
+- `support.html` — Support / FAQ (account deletion, cancelling Premium,
+  reporting incorrect data)
+- `styles.css` — shared styles (uses the app's own brand colours), all four
+  pages draw from this one stylesheet rather than duplicating styles per page
 - `CNAME` — tells GitHub Pages to serve this site at `www.gaelgrounds.ie`
 
 This is marketing content only — it describes the app's features, it doesn't
@@ -55,15 +61,13 @@ matching the brand colours already used in the iOS app
 
 ## Before this goes live for real
 
-- **Contact email**: every page currently links to `hello@gaelgrounds.ie` —
-  make sure that inbox exists and is actually monitored, or swap it for
-  whatever address you want to use, in `index.html`, `privacy.html`, and
-  `terms.html`.
-- **Legal review**: the Privacy Policy and Terms of Service are drafted to
-  accurately describe what the app actually collects and how the €1.99/month
-  subscription works, but this isn't legal advice — worth a solicitor's
-  once-over before this is the live policy backing an App Store submission,
-  especially since it's handling EU/GDPR user data.
+- **Legal review**: the Privacy Policy and Terms of Service go further than
+  a first draft — GDPR Article 6 legal basis, DPC complaint rights, the EU
+  14-day subscription withdrawal right, GAA non-affiliation language — but
+  `terms.html`'s limitation-of-liability section is explicitly flagged
+  in-page as a working draft, not solicitor-reviewed. Worth a paid legal
+  review once Premium is generating real revenue; not treated as a launch
+  blocker.
 - **App Store link**: the "Coming soon" badges aren't clickable yet. Once
   the app has a real App Store listing, swap those `<span class="store-badge">`
   elements for real `<a href="...">` links to the App Store page.

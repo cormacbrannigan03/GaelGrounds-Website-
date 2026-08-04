@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — GaelGrounds</title>
-<meta name="description" content="GaelGrounds privacy policy — what data we collect, why, and your rights.">
+<meta name="description" content="GaelGrounds privacy policy — what data we collect, why, and your rights under GDPR.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,6 +21,7 @@
       <a href="/#features">Features</a>
       <a href="/#premium">Premium</a>
       <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
     </div>
     <span class="btn btn-ghost">Coming soon</span>
   </nav>
@@ -30,59 +31,82 @@
   <div class="wrap">
     <a class="back" href="/">← Back to GaelGrounds</a>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 1 August 2026</p>
+    <p class="updated">Last updated: 4 August 2026 · Effective date: 4 August 2026</p>
 
-    <p>This policy explains what information GaelGrounds ("we", "us") collects when you use the GaelGrounds app, why we collect it, and what rights you have over it. GaelGrounds is operated from Ireland, and this policy is written with GDPR in mind.</p>
+    <h2>1. Who we are</h2>
+    <p>GaelGrounds is operated by Cormac Brannigan, trading as GaelGrounds ("we", "us"), a sole trader registered in Ireland. Contact: <a href="mailto:cormac.brannigan03@gmail.com">cormac.brannigan03@gmail.com</a>.</p>
+    <p>We are the data controller for the personal data described in this policy.</p>
 
-    <h2>1. Information we collect</h2>
-    <p>We collect only what's needed to run the app:</p>
+    <h2>2. What data we collect</h2>
+    <div class="policy-table-wrap">
+      <table>
+        <tr><th>Data</th><th>Where it comes from</th><th>Why we collect it</th></tr>
+        <tr><td>Email address, password (hashed)</td><td>Sign-up</td><td>Create and secure your account</td></tr>
+        <tr><td>Display name / profile info</td><td>Profile setup</td><td>Show your identity to friends, on the leaderboard</td></tr>
+        <tr><td>Grounds check-ins (location + timestamp)</td><td>Check-in flow, ground pages</td><td>Build your personal visit record, power the map</td></tr>
+        <tr><td>Match logs (teams, scores, dates)</td><td>Add Match</td><td>Build your match history</td></tr>
+        <tr><td>Friend connections</td><td>Friends feature</td><td>Social feed, friend profiles</td></tr>
+        <tr><td>Leaderboard activity</td><td>Leaderboard</td><td>Show rankings against other users</td></tr>
+        <tr><td>Achievements/badges unlocked</td><td>Achievements service</td><td>Gamification features</td></tr>
+        <tr><td>Payment status (Premium subscribers only, once launched)</td><td>Apple's in-app purchase system</td><td>Unlock Premium features — <strong>we never see or store your card details; Apple handles all payment data as the payment processor</strong></td></tr>
+      </table>
+    </div>
+    <p>We do not collect more than the app needs to function. We don't sell personal data to anyone, ever.</p>
+
+    <h2>3. Legal basis for processing (GDPR Article 6)</h2>
     <ul>
-      <li><strong>Account information</strong> — the email address and password you sign up with. Your password is handled by our authentication provider and stored in hashed form; we never see or store it in plain text.</li>
-      <li><strong>Profile information</strong> — your display name and the county you choose to support.</li>
-      <li><strong>Activity data</strong> — the matches you check into, the grounds you log as visited, any matches you add manually, and the timestamps of that activity.</li>
-      <li><strong>Social data</strong> — friend requests and connections you make with other users, if you're a Premium subscriber.</li>
-      <li><strong>Content you upload</strong> — photos you choose to add to a ground's photo gallery.</li>
-      <li><strong>Subscription status</strong> — whether you have an active Premium subscription and when it renews. This is provided to us by Apple after you purchase through the App Store — we never receive or store your card details.</li>
+      <li><strong>Contract</strong>: account creation, check-ins, match logs, core app functionality — necessary to provide the service you signed up for.</li>
+      <li><strong>Legitimate interest</strong>: leaderboard, friend features, achievements — reasonably expected as part of a social/gamified app, and you can opt out by not using those features.</li>
+      <li><strong>Consent</strong>: any optional marketing communications (if introduced later) — will use a separate, specific opt-in.</li>
     </ul>
 
-    <h2>2. How we use it</h2>
+    <h2>4. Who we share data with</h2>
     <ul>
-      <li>To operate the app's core features — check-ins, your personal record, achievements, friends and the leaderboard.</li>
-      <li>Some information is visible to other users by design: check-ins at a match, ground photos, your display name, and — if you're a Premium subscriber — your position on the leaderboard.</li>
-      <li>To communicate with you about your account when necessary (e.g. a support request you send us).</li>
+      <li><strong>Supabase</strong> (our backend/database provider) — processes all app data on our behalf under a Data Processing Agreement. Supabase's servers/subprocessors are covered by their own DPA and Standard Contractual Clauses for any data transferred outside the EEA.</li>
+      <li><strong>Apple</strong> — handles App Store account, download, and payment data as an independent controller under Apple's own privacy policy, not ours.</li>
+      <li>We do not share your data with advertisers or data brokers. We do not currently use third-party analytics or tracking SDKs; if that changes, this policy and the App Store privacy label will be updated first.</li>
     </ul>
 
-    <h2>3. Who we share it with</h2>
+    <h2>5. How long we keep data</h2>
     <ul>
-      <li><strong>Supabase</strong>, our database and infrastructure provider, which stores app data on our behalf, hosted in the EU.</li>
-      <li><strong>Apple</strong>, which processes your Premium subscription payment. We never receive your payment card details — only confirmation of your subscription status.</li>
+      <li>Account and app data: kept for as long as your account is active.</li>
+      <li>If you delete your account, or ask us to delete it: your data is deleted within 30 days.</li>
+      <li>Deleted data may persist in routine backups for up to 30 days after deletion, for disaster-recovery purposes only, before being permanently purged.</li>
     </ul>
-    <p>We do not sell your personal data, and we do not use advertising trackers in the app.</p>
-
-    <h2>4. Where your data is stored</h2>
-    <p>App data is stored on Supabase infrastructure hosted in the EU (Ireland region).</p>
-
-    <h2>5. Data retention</h2>
-    <p>We keep your data for as long as your account is active. If you delete your account, or ask us to, we'll delete your personal data, other than where we're required to keep records for a longer period by law.</p>
 
     <h2>6. Your rights</h2>
-    <p>Under GDPR, you have the right to access, correct, delete, or export your data, and to object to how it's processed. To exercise any of these rights, contact us using the details below.</p>
+    <p>Under GDPR, you can ask us to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Correct inaccurate data</li>
+      <li>Delete your data ("right to be forgotten")</li>
+      <li>Export your data (data portability)</li>
+      <li>Object to or restrict certain processing</li>
+    </ul>
+    <p>To exercise any of these, email <a href="mailto:cormac.brannigan03@gmail.com">cormac.brannigan03@gmail.com</a>. We'll respond within one month, as required by GDPR.</p>
+    <p>You also have the right to complain to the Irish Data Protection Commission (<a href="https://dataprotection.ie" target="_blank" rel="noopener">dataprotection.ie</a>) if you think we've mishandled your data.</p>
 
-    <h2>7. Children's privacy</h2>
-    <p>GaelGrounds is not directed at children under 16, and we do not knowingly collect information from them.</p>
+    <h2>7. Premium subscription (once launched)</h2>
+    <p>If you subscribe to GaelGrounds Premium (€1.99/month), billing is handled entirely by Apple through the App Store. We only receive confirmation of your subscription status — never your payment details. You can cancel anytime through your Apple ID subscription settings. See our <a href="terms.html">Terms of Service</a> for the 14-day withdrawal/cooling-off right.</p>
 
-    <h2>8. Changes to this policy</h2>
-    <p>If we make material changes to this policy, we'll update the date at the top of this page.</p>
+    <h2>8. Children</h2>
+    <p>GaelGrounds is not directed at, and may not be used by, anyone under the age of 16. We do not knowingly collect personal data from children under 16. If we become aware that we have collected data from a child under 16 without verifiable parental consent, we will delete it.</p>
 
-    <h2>9. Contact us</h2>
-    <p>Questions about this policy or your data? Email us at <a href="mailto:hello@gaelgrounds.ie">hello@gaelgrounds.ie</a>.</p>
+    <h2>9. Changes to this policy</h2>
+    <p>If we materially change how we handle your data, we'll update this page and, where required, notify you in-app.</p>
+
+    <h2>10. Contact</h2>
+    <div class="contact-box">
+      Cormac Brannigan<br>
+      <a href="mailto:cormac.brannigan03@gmail.com">cormac.brannigan03@gmail.com</a>
+    </div>
   </div>
 </div>
 
 <footer class="site">
   <div class="wrap footer-bottom">
     <span>© 2026 GaelGrounds. Not affiliated with the GAA.</span>
-    <span><a href="terms.html">Terms of Service</a></span>
+    <span><a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a></span>
   </div>
 </footer>
 

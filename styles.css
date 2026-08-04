@@ -448,6 +448,41 @@ footer.site {
 .policy ul { padding-left: 20px; }
 .policy a.back { display: inline-block; margin-bottom: 24px; font-weight: 700; color: var(--green-light); text-decoration: none; font-size: 0.9rem; }
 
+.policy .intro-note { color: var(--muted); font-size: 0.92rem; margin-bottom: 8px; }
+
+.policy-table-wrap { overflow-x: auto; margin: 1.2em 0; }
+.policy table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 0.92rem; }
+.policy th, .policy td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.policy th { color: var(--muted); font-weight: 700; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+.policy .contact-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-top: 8px;
+}
+
+.policy .note {
+  background: rgba(217, 164, 65, 0.12);
+  border: 1px solid rgba(217, 164, 65, 0.35);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.88rem;
+  color: #6b5613;
+  margin: 1em 0;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 12px;
+}
+.faq-item h3 { font-size: 1rem; margin: 0 0 4px; color: var(--ink); }
+.faq-item p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
 /* Responsive */
 @media (max-width: 880px) {
   nav .links { display: none; }
