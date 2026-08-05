@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confirm your email — GaelGrounds</title>
+<meta name="description" content="Confirming your GaelGrounds account email.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap">
+    <a class="brand" href="/">
+      <span class="mark">
+        <img src="icon-64.png" alt="GaelGrounds">
+      </span>
+      GaelGrounds
+    </a>
+    <div class="links">
+      <a href="/#features">Features</a>
+      <a href="/#premium">Premium</a>
+      <a href="support.html">Support</a>
+    </div>
+    <span class="btn btn-ghost">Coming soon</span>
+  </nav>
+</header>
+
+<div class="policy">
+  <div class="wrap" style="max-width: 560px; text-align: center;">
+    <div id="state-loading">
+      <h1>Confirming…</h1>
+      <p style="color: var(--muted);">One second.</p>
+    </div>
+
+    <div id="state-success" hidden>
+      <h1>You're confirmed 🎉</h1>
+      <p style="color: var(--muted); font-size: 1.05rem;">Your email's verified — head back to the GaelGrounds app and sign in.</p>
+    </div>
+
+    <div id="state-error" hidden>
+      <h1>That link didn't work</h1>
+      <p style="color: var(--muted); font-size: 1.05rem;" id="error-detail">This confirmation link may have expired or already been used.</p>
+      <p style="color: var(--muted);">Go back to the app and try signing up again, or use "Resend confirmation" if that's an option there.</p>
+    </div>
+
+    <div id="state-neutral" hidden>
+      <h1>GaelGrounds</h1>
+      <p style="color: var(--muted); font-size: 1.05rem;">Nothing to confirm here right now — if you're trying to verify your email, use the link from your confirmation email.</p>
+    </div>
+
+    <p style="margin-top: 32px;"><a class="back" href="/" style="margin-bottom: 0;">← Back to gaelgrounds.ie</a></p>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap footer-bottom">
+    <span>© 2026 GaelGrounds. Not affiliated with the GAA.</span>
+    <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Supabase's auth redirect appends the result as a URL hash fragment --
+  // #access_token=...&type=signup on success, or #error=...&error_description=...
+  // on failure (expired/already-used link). Nothing here ever talks to
+  // Supabase directly: the confirmation itself already happened server-side
+  // before this page loaded. This just reads what already happened and
+  // shows the right message -- the actual account tokens in a successful
+  // hash aren't used or stored by this page at all.
+  var hash = window.location.hash.replace(/^#/, "");
+  var params = new URLSearchParams(hash);
+
+  var loading = document.getElementById("state-loading");
+  var success = document.getElementById("state-success");
+  var error = document.getElementById("state-error");
+  var neutral = document.getElementById("state-neutral");
+
+  loading.hidden = true;
+
+  if (params.has("error")) {
+    var description = params.get("error_description");
+    if (description) {
+      document.getElementById("error-detail").textContent = description.replace(/\+/g, " ");
+    }
+    error.hidden = false;
+  } else if (params.has("access_token") || params.has("type")) {
+    success.hidden = false;
+  } else {
+    neutral.hidden = false;
+  }
+})();
+</script>
+
+</body>
+</html>
